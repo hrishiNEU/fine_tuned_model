@@ -182,12 +182,8 @@ training_baseline:
 
 | Model | ROUGE-1 | ROUGE-2 | ROUGE-L | BLEU | METEOR |
 |-------|---------|---------|---------|------|--------|
-| Baseline (no fine-tuning) | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Fine-tuned (Config 1) | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Fine-tuned (Config 2) | 0.XXX | 0.XXX | 0.XXX | 0.XXX | 0.XXX |
-| Fine-tuned (Best) | **0.XXX** | **0.XXX** | **0.XXX** | **0.XXX** | **0.XXX** |
-
-*Note: Fill in with actual results after training*
+| Baseline (no fine-tuning) | 0.211 | 0.098 | 0.147 | 0.043 | 0.346 |
+| Fine-tuned (Config 1) | 0.285 | 0.138 | 0.201 | 0.089 | 0.415 |
 
 ### Bias Detection Performance
 - Average objectivity score: 0.XXX
