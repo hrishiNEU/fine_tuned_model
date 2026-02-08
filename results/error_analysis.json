@@ -1,0 +1,90 @@
+{
+  "total_examples_analyzed": 25,
+  "poor_performance_count": 21,
+  "poor_performance_rate": 84.0,
+  "avg_rouge2_score": 0.09785036799587181,
+  "median_rouge2_score": 0.1,
+  "min_rouge2_score": 0.007633587786259542,
+  "max_rouge2_score": 0.2361111111111111,
+  "error_category_distribution": {
+    "too_long": 21,
+    "missing_key_facts": 6,
+    "low_quality": 21,
+    "redundancy": 5
+  },
+  "top_3_error_categories": [
+    [
+      "too_long",
+      21
+    ],
+    [
+      "low_quality",
+      21
+    ],
+    [
+      "missing_key_facts",
+      6
+    ]
+  ],
+  "sample_error_examples": [
+    {
+      "index": 0,
+      "input_text": "(CNN)The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territories. The formal accession was marked with a ceremony at The Hague, in the Netherlands, where the court is based. The Palestinians signed the ICC's founding Rome Statute in January, when they also accepted its jurisdiction over alleged crimes committed \"in the occupied Palestinian territory, includin...",
+      "reference": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June . Israel and the United States opposed the move, which could open the door to war crimes investigations against Israelis .",
+      "prediction": "(CNN)The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territories. The formal accession was marked with a ceremony at The Hague, in the Netherlands, where the court is based. The Palestinians signed the ICC's founding Rome Statute in January, when they also accepted its jurisdiction over the alleged crimes committed \"in the occupied Palestinian territory, including East Jerusalem, since June 13, 2014.\" Later that month, the ICC opened a preliminary examination into the situation in Palestine territories, paving the way for possible war crimes investigations against Israelis. As members of the court, Palestinians may be subject to counter-charges as well. Israel and the United States, neither of which is an ICC member, opposed the Palestinians' efforts to join the body. But Palestinian Foreign Minister Riad al-Malki, speaking at Wednesday's ceremony, said it was a move toward greater justice. \"As Palestine formally becomes a State Party to the Rome Statutes today, the world is also a step closer to ending a long era of impunity and injustice,\" he said, according to an ICC news release. \"Indeed, today brings us closer to our shared goals of justice and peace.\" Judge",
+      "rouge2_score": 0.14814814814814814,
+      "error_categories": [
+        "too_long",
+        "missing_key_facts",
+        "low_quality"
+      ]
+    },
+    {
+      "index": 2,
+      "input_text": "(CNN)If you've been following the news lately, there are certain things you doubtless know about Mohammad Javad Zarif. He is, of course, the Iranian foreign minister. He has been U.S. Secretary of State John Kerry's opposite number in securing a breakthrough in nuclear discussions that could lead to an end to sanctions against Iran -- if the details can be worked out in the coming weeks. And he received a hero's welcome as he arrived in Iran on a sunny Friday morning. \"Long live Zarif,\" crowds c...",
+      "reference": "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister . He once participated in a takeover of the Iranian Consulate in San Francisco . The Iranian foreign minister tweets in English .",
+      "prediction": "(CNN)If you've been following the news lately, there are certain things you doubtless know about Mohammad Javad Zarif. He is, of course, the Iranian foreign minister. He has been U.S. Secretary of State John Kerry's opposite number in securing a breakthrough in nuclear discussions that could lead to an end to sanctions against Iran -- if the details can be worked out in the coming weeks. And he received a hero's welcome as he arrived in Iran on a sunny Friday morning. \"Long live Zarif,\" crowds chanted as his car rolled slowly down the packed street. You may well have read that he is \"polished\" and, unusually for one burdened with such weighty issues, \"jovial.\" An Internet search for \"Mohammad Javad Zardarif\" and \"Jovial\" yields thousands of results. He certainly has gone a long way to bring Iran in from the cold and allow it to rejoin the international community. But there are some facts about Zarif that are less well-known. Here are six: . In September 2013, Zarif tweeted \"Happy Rosh Hashanah,\" referring to the Jewish New Year. That prompted Christine Pelosi, the daughter of House Minority Leader Nancy Pelosi,",
+      "rouge2_score": 0.06140350877192982,
+      "error_categories": [
+        "too_long",
+        "missing_key_facts",
+        "low_quality"
+      ]
+    },
+    {
+      "index": 3,
+      "input_text": "(CNN)Five Americans who were monitored for three weeks at an Omaha, Nebraska, hospital after being exposed to Ebola in West Africa have been released, a Nebraska Medicine spokesman said in an email Wednesday. One of the five had a heart-related issue on Saturday and has been discharged but hasn't left the area, Taylor Wilson wrote. The others have already gone home. They were exposed to Ebola in Sierra Leone in March, but none developed the deadly virus. They are clinicians for Partners in Healt...",
+      "reference": "17 Americans were exposed to the Ebola virus while in Sierra Leone in March . Another person was diagnosed with the disease and taken to hospital in Maryland . National Institutes of Health says the patient is in fair condition after weeks of treatment .",
+      "prediction": "(CNN)Five Americans who were monitored for three weeks at an Omaha, Nebraska, hospital after being exposed to Ebola in West Africa have been released, a Nebraska Medicine spokesman said in an email Wednesday. One of the five had a heart-related issue on Saturday and has been discharged but hasn't left the area, Taylor Wilson wrote. The others have already gone home. The five Americans were in the Omaha area for more than three weeks, Wilson said. They are clinicians for Partners in Health, a Boston-based aid group. They all had contact with a colleague who was diagnosed with the disease and is being treated at the National Institutes of Health in Bethesda, Maryland. As of Monday, that health care worker is in fair condition. The Centers for Disease Control and Prevention in Atlanta has said the last of 17 patients who were being monitored are expected to be released by Thursday. More than 10,000 people have died in a West African epidemic of Ebola that dates to December 2013, according to the World Health Organization. Almost all the deaths have been in Guinea, Liberia and Sierra Leone. Ebola is spread by direct contact with the bodily fluids of an infected person.",
+      "rouge2_score": 0.1219512195121951,
+      "error_categories": [
+        "too_long",
+        "redundancy",
+        "low_quality"
+      ]
+    },
+    {
+      "index": 4,
+      "input_text": "(CNN)A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday. The prestigious private school didn't identify the student, citing federal privacy laws. In a news release, it said the student was no longer on campus and will face student conduct review. The student was identified during an investigation by campus police and the office of student affairs and admitted to placing the noose on the tree early Wednesday, the univer...",
+      "reference": "Student is no longer on Duke University campus and will face disciplinary review . School officials identified student during investigation and the person admitted to hanging the noose, Duke says . The noose, made of rope, was discovered on campus about 2 a.m.",
+      "prediction": "(CNN)A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday. The prestigious private school didn't identify the student, citing federal privacy laws. In a news release, it said the student was no longer on campus and will face student conduct review. The student was identified during an investigation by campus police and the office of student affairs and admitted to placing the noose on the tree early Wednesday, the university said. Officials are still trying to determine if other people were involved. Criminal investigations into the incident are ongoing as well. Students and faculty members marched Wednesday afternoon chanting \"We are not afraid. We stand together,\" after pictures of the Noose were passed around on social media. At a forum held on the steps of Duke Chapel, close to where the nooses was discovered at 2 a.m., hundreds of people gathered. \"You came here for the reason that you want to say with me, 'This is no Duke we will accept. This is no Durham we want. This isn't the Duke we're here to experience. And this is not the Duke that we're going to create,' \" Duke President Richard Brodhead told the crowd. The incident is one of several",
+      "rouge2_score": 0.13953488372093023,
+      "error_categories": [
+        "too_long",
+        "redundancy",
+        "low_quality"
+      ]
+    },
+    {
+      "index": 5,
+      "input_text": "(CNN)He's a blue chip college basketball recruit. She's a high school freshman with Down syndrome. At first glance Trey Moses and Ellie Meredith couldn't be more different. But all that changed Thursday when Trey asked Ellie to be his prom date. Trey -- a star on Eastern High School's basketball team in Louisville, Kentucky, who's headed to play college ball next year at Ball State -- was originally going to take his girlfriend to Eastern's prom. So why is he taking Ellie instead? \"She's great.....",
+      "reference": "College-bound basketball star asks girl with Down syndrome to high school prom . Pictures of the two during the \"prom-posal\" have gone viral .",
+      "prediction": "(CNN)He's a blue chip college basketball recruit. She's a high school freshman with Down syndrome. At first glance Trey Moses and Ellie Meredith couldn't be more different. But all that changed Thursday when Trey asked Ellie to be his prom date. Trey -- a star on Eastern High School's basketball team in Louisville, Kentucky, who's headed to play college ball next year at Ball State -- was originally going to take his girlfriend to Eastern's prom. So why is he taking Ellie instead? \"She's great... she listens and she's easy to talk to\" he said. Trey made the prom-posal (yes, that's what they are calling invites to prom these days) in the gym during Ellie's P.E. class. Trina Helson, a teacher at Eastern, alerted the school's newspaper staff to the Prom-posal and posted photos of Trey and Ellie on Twitter that have gone viral. She wasn't surpristed by Trey's actions. \"That's the kind of person Trey is,\" she said. To help make sure she said yes, Trey entered the gym armed with flowers and a poster that read \"Let's Party Like it's 1989,\" a reference to the latest album by Taylor Swift, Ellie's favorite singer.",
+      "rouge2_score": 0.059322033898305086,
+      "error_categories": [
+        "too_long",
+        "low_quality"
+      ]
+    }
+  ]
+}

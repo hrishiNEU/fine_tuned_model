@@ -1,0 +1,39 @@
+{
+  "baseline": {
+    "model_name": "baseline",
+    "rouge1": 0.21112206738653477,
+    "rouge2": 0.09866104992904776,
+    "rougeL": 0.1473325116201984,
+    "bleu": 0.04353250539405541,
+    "meteor": 0.3463863708708205,
+    "bias_metrics": {
+      "avg_sentiment_polarity": 0.08900913784537261,
+      "avg_subjectivity": 0.4199560986906979,
+      "avg_bias_score": 0.2,
+      "pct_subjective": 20.0
+    },
+    "num_samples": 25
+  },
+  "fine_tuned": {
+    "model_name": "fine-tuned",
+    "rouge1": 0.21112206738653477,
+    "rouge2": 0.09866104992904776,
+    "rougeL": 0.1473325116201984,
+    "bleu": 0.04353250539405541,
+    "meteor": 0.3463863708708205,
+    "bias_metrics": {
+      "avg_sentiment_polarity": 0.08900913784537261,
+      "avg_subjectivity": 0.4199560986906979,
+      "avg_bias_score": 0.2,
+      "pct_subjective": 20.0
+    },
+    "num_samples": 25
+  },
+  "improvements": {
+    "rouge1_improvement": 0.0,
+    "rouge2_improvement": 0.0,
+    "rougeL_improvement": 0.0,
+    "bleu_improvement": 0.0,
+    "meteor_improvement": 0.0
+  }
+}

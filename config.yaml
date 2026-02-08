@@ -1,0 +1,144 @@
+# Configuration file for News Summarization with Bias Detection
+
+# Dataset Configuration
+data:
+  dataset_name: "cnn_dailymail"  # Using CNN/DailyMail dataset
+  dataset_config: "3.0.0"
+  train_size: 0.8
+  val_size: 0.1
+  test_size: 0.1
+  max_input_length: 1024
+  max_target_length: 256
+  cache_dir: "./data/cache"
+  
+# Model Configuration
+model:
+  base_model: "facebook/bart-base"  # Options: "t5-base", "google/pegasus-cnn_dailymail"
+  use_peft: true
+  peft_method: "lora"  # Low-Rank Adaptation
+  
+# LoRA Configuration
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  target_modules: ["q_proj", "v_proj"]
+  bias: "none"
+  
+# Training Configuration - Baseline (FASTER VERSION)
+training_baseline:
+  output_dir: "./models/baseline"
+  num_train_epochs: 1  # Reduced from 3 to 1
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00005
+  weight_decay: 0.01
+  warmup_steps: 100  # Reduced from 500
+  logging_steps: 10   # Reduced from 100 for more frequent updates
+  eval_steps: 100     # Reduced from 500
+  save_steps: 100     # Reduced from 500
+  save_total_limit: 2  # Reduced from 3
+  load_best_model_at_end: true
+  metric_for_best_model: "rouge2"
+  greater_is_better: true
+  fp16: true
+  eval_strategy: "steps"
+  
+# Hyperparameter Configuration 1
+training_config1:
+  output_dir: "./models/config1"
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00003  # Changed from 3e-5 string to float
+  weight_decay: 0.01
+  warmup_steps: 300
+  logging_steps: 100
+  eval_steps: 500
+  save_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "rouge2"
+  greater_is_better: true
+  fp16: true
+  eval_strategy: "steps"
+  
+# Hyperparameter Configuration 2
+training_config2:
+  output_dir: "./models/config2"
+  num_train_epochs: 4
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 2
+  learning_rate: 0.00005  # Changed from 5e-5 string to float
+  weight_decay: 0.005
+  warmup_steps: 500
+  logging_steps: 100
+  eval_steps: 500
+  save_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "rouge2"
+  greater_is_better: true
+  fp16: true
+  eval_strategy: "steps"
+
+# Hyperparameter Configuration 3
+training_config3:
+  output_dir: "./models/config3"
+  num_train_epochs: 5
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 0.00007  # Changed from 7e-5 string to float
+  weight_decay: 0.02
+  warmup_steps: 700
+  logging_steps: 100
+  eval_steps: 500
+  save_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "rouge2"
+  greater_is_better: true
+  fp16: true
+  eval_strategy: "steps"
+
+# Evaluation Configuration
+evaluation:
+  metrics: ["rouge", "bleu", "meteor", "bertscore"]
+  bias_detection:
+    enable: true
+    threshold: 0.3
+    keywords_file: "./data/bias_keywords.json"
+    
+# Inference Configuration
+inference:
+  batch_size: 8
+  num_beams: 4
+  max_length: 256
+  min_length: 50
+  length_penalty: 2.0
+  early_stopping: true
+  
+# Bias Detection Configuration
+bias_detection:
+  political_keywords:
+    left_leaning: ["progressive", "liberal", "democrat", "left-wing"]
+    right_leaning: ["conservative", "republican", "right-wing"]
+  sentiment_analysis: true
+  subjectivity_threshold: 0.5
+  
+# Logging Configuration
+logging:
+  use_wandb: true
+  project_name: "news-summarization-bias-detection"
+  log_model: true
+  
+# Paths
+paths:
+  data_dir: "./data"
+  model_dir: "./models"
+  results_dir: "./results"
+  logs_dir: "./results/logs"
