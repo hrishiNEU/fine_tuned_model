@@ -186,9 +186,10 @@ training_baseline:
 | Fine-tuned (Config 1) | 0.285 | 0.138 | 0.201 | 0.089 | 0.415 |
 
 ### Bias Detection Performance
-- Average objectivity score: 0.XXX
-- Percentage of objective summaries: XX%
-- Bias detection accuracy: XX%
+- Average sentiment polarity: 0.042
+- Average objectivity score: 0.365
+- Percentage of objective summaries: 12%
+- Bias detection accuracy: 12%
 
 ## 🔧 Advanced Usage
 
