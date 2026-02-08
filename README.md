@@ -258,7 +258,7 @@ This project is licensed under the MIT License.
 
 ## 📧 Contact
 
-For questions or issues, please open a GitHub issue or contact [your-email].
+For questions or issues, please open a GitHub issue or contact [email](kulkarni.hri@northeastern.edu).
 
 ---
 
