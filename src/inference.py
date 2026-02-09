@@ -53,16 +53,33 @@ class NewsSummarizer:
         """Load the fine-tuned model."""
         logger.info(f"Loading model from {model_path}")
         
-        if self.model_config['use_peft']:
-            # Load base model
-            base_model = AutoModelForSeq2SeqLM.from_pretrained(
-                self.model_config['base_model']
-            )
-            # Load PEFT adapter
-            model = PeftModel.from_pretrained(base_model, model_path)
-            model = model.merge_and_unload()
+        # Check if adapter_config.json exists (PEFT/LoRA model)
+        adapter_config_path = os.path.join(model_path, 'adapter_config.json')
+        
+        if os.path.exists(adapter_config_path):
+            # This is a PEFT model with LoRA adapters
+            try:
+                logger.info("Loading as PEFT model with LoRA adapters")
+                base_model = AutoModelForSeq2SeqLM.from_pretrained(
+                    self.model_config['base_model']
+                )
+                model = PeftModel.from_pretrained(base_model, model_path)
+                model = model.merge_and_unload()
+            except Exception as e:
+                logger.error(f"Error loading PEFT model: {e}")
+                logger.info("Falling back to loading as regular model")
+                model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
         else:
-            model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+            # This is a regular fine-tuned model (full weights saved)
+            logger.info("Loading as regular fine-tuned model (no LoRA adapters found)")
+            try:
+                model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+            except Exception as e:
+                logger.error(f"Error loading model: {e}")
+                logger.info("Loading base model as fallback")
+                model = AutoModelForSeq2SeqLM.from_pretrained(
+                    self.model_config['base_model']
+                )
         
         model.eval()
         return model

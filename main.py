@@ -1,8 +1,3 @@
-"""
-Main execution script for News Summarization with Bias Detection
-Run this script to execute the complete pipeline.
-"""
-
 import argparse
 import logging
 import sys
