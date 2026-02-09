@@ -261,5 +261,3 @@ This project is licensed under the MIT License.
 For questions or issues, please open a GitHub issue or contact [email](kulkarni.hri@northeastern.edu).
 
 ---
-
-**Note**: Remember to fill in actual results, add your video walkthrough link, and update contact information before submission.
